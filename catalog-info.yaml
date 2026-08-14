@@ -1,0 +1,32 @@
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: customer-experience
+  title: Contract-First IDP Tenant
+  description: Tenant Domain for Contract-First IDP workloads.
+  annotations:
+    contract-first-idp.github.io/scm-provider: github
+    contract-first-idp.github.io/scm-host: github.com
+    contract-first-idp.github.io/domain-org: contract-first-idp-test
+    contract-first-idp.github.io/domain-repo: customer-experience-domain
+  links:
+    - url: https://github.com/contract-first-idp-test/customer-experience-domain
+      title: Domain repository
+      icon: github
+spec:
+  owner: group:default/domain-maintainers
+  platformTarget: resource:default/workshop
+  groupId: io.github.cfidp
+  environments:
+    order:
+      - dev
+      - test
+      - prod
+    build: dev
+    definitions:
+      dev:
+        namespaceSuffix: "-dev"
+      test:
+        namespaceSuffix: "-test"
+      prod:
+        namespaceSuffix: ""
