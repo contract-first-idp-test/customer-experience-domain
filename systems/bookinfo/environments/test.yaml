@@ -1,0 +1,5 @@
+systemName: bookinfo
+groupId: io.github.cfidp.bookinfo
+repository:
+  cloneUrl: https://github.com/contract-first-idp-test/bookinfo-system.git
+  revision: main
